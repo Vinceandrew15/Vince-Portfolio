@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation Details | TIGOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(circle at 100% 0%, #0f172a 0%, #020617 100%);
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .step-gradient {
+            background: linear-gradient(180deg, rgba(56, 189, 248, 0.2) 0%, transparent 100%);
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: 20px;
+            top: 40px;
+        }
+
+        .tech-pill {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 99px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <main class="max-w-4xl mx-auto space-y-20"> <div class="space-y-6 pt-10">
+            <a href="projects.html" class="text-sky-400 text-sm font-bold hover:underline transition-all">← Back to Projects</a>
+            <div class="space-y-2">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    TIGOM <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">System Design.</span>
+                </h1>
+                <p class="text-slate-400 text-lg font-medium">Technical implementation of the Budget Planner Web Application.</p>
+            </div>
+        </div>
+
+        <div class="relative space-y-12 pl-12"> <div class="step-gradient"></div>
+
+            <div class="glass p-10 relative">
+                <div class="absolute -left-[44px] top-10 w-6 h-6 rounded-full bg-sky-500 border-4 border-[#020617]"></div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold">User Interface & Prototyping</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Figma</span>
+                        <span class="tech-pill">Vue.js</span>
+                    </div>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Designed a comprehensive, user-friendly interface using <b>Figma</b> to map out user journeys and expense tracking workflows. The final frontend was developed using the <b>Vue.js framework</b> to ensure a reactive and seamless single-page experience.
+                </p>
+            </div>
+
+            <div class="glass p-10 relative">
+                <div class="absolute -left-[44px] top-10 w-6 h-6 rounded-full bg-blue-500 border-4 border-[#020617]"></div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold">Server-Side Infrastructure</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                    </div>
+                </div>
+                <ul class="text-slate-300 space-y-6 text-lg">
+                    <li class="flex gap-4">
+                        <span class="text-sky-400 font-black">01.</span>
+                        <span>Built a robust back-end server using <b>Node.js</b> to manage financial data processing and secure user sessions.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-sky-400 font-black">02.</span>
+                        <span>Utilized <b>PostgreSQL</b> for the primary database to ensure reliable storage of user expenses and budget records.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-10 relative">
+                <div class="absolute -left-[44px] top-10 w-6 h-6 rounded-full bg-emerald-500 border-4 border-[#020617]"></div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                    <h3 class="text-2xl font-bold">Hosting & Production</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Hostinger</span>
+                        <span class="tech-pill">Web Hosting</span>
+                    </div>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-lg mb-10">
+                    Successfully deployed the application using <b>Hostinger</b>, managing the production environment to keep the service accessible for active budget management.
+                </p>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-3">Project Goal</p>
+                    <p class="text-lg text-slate-400 italic font-medium leading-relaxed">
+                        "Developed a web application specifically designed to empower users with better expense management and financial planning".
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass p-12 border-sky-500/20 text-center mb-20">
+            <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-6">System Architecture Type</p>
+            <div class="text-4xl md:text-5xl font-black tracking-tighter italic text-white">FULL-STACK WEB APP</div>
+            <div class="flex justify-center gap-6 mt-8">
+                <p class="text-xs text-slate-500 font-black uppercase tracking-[0.3em]">Scalable</p>
+                <div class="w-1 h-1 bg-slate-700 rounded-full my-auto"></div>
+                <p class="text-xs text-slate-500 font-black uppercase tracking-[0.3em]">Secure</p>
+                <div class="w-1 h-1 bg-slate-700 rounded-full my-auto"></div>
+                <p class="text-xs text-slate-500 font-black uppercase tracking-[0.3em]">Intuitive</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

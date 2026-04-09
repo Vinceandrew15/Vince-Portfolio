@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Projects | Vince Gica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(circle at 100% 100%, #0f172a 0%, #020617 100%);
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(59, 130, 246, 0.05) 100%);
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative">
+    <div class="blob -top-20 -left-20"></div>
+
+    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto relative z-10">
+        <a href="index.html" class="text-3xl font-extrabold tracking-tighter hover:opacity-80 transition">VINCE<span class="text-sky-400">.</span></a>
+        <div class="flex items-center space-x-10 text-sm font-semibold tracking-wide text-slate-400">
+            <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+            <a href="#" class="text-white border-b-2 border-sky-500 pb-1">PROJECTS</a>
+            <a href="#" class="hover:text-white transition-colors">CONTACT</a>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-8 pt-20 pb-12 relative z-10">
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Launch <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">Projects.</span></h2>
+        <p class="text-slate-400 text-lg max-w-2xl font-medium">
+            A showcase of my experience as a Full-Stack Developer, from IoT monitoring systems to enterprise-level management tools.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 pb-32 grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        
+        <div class="glass rounded-3xl p-8 group">
+            <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 mb-6 flex items-center justify-center relative overflow-hidden">
+                <span class="text-4xl font-black text-slate-700 tracking-widest group-hover:text-sky-400/50 transition-colors uppercase">IoT-Monitor</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">ReactJS</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">NodeJS</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">PostgreSQL</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">Flask</span>
+            </div>
+            <h3 class="text-2xl font-extrabold mb-2">IoT Warehouse Monitoring</h3>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                Full-stack system for monitoring warehouse humidity and temperature. Features real-time data transfer via NodeJS, automated SMS alerts via Semaphore API, and data forecasting using Python Flask.
+            </p>
+            <a href="iot.html" class="text-sky-400 font-bold text-sm hover:underline">View Implementation Details →</a>
+        </div>
+
+        <div class="glass rounded-3xl p-8 group">
+            <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 mb-6 flex items-center justify-center relative overflow-hidden">
+                <span class="text-4xl font-black text-slate-700 tracking-widest group-hover:text-sky-500/50 transition-colors">TIGOM</span>
+            </div>
+            <div class="flex gap-2 mb-4">
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">Vue.js</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">NodeJS</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">Figma</span>
+            </div>
+            <h3 class="text-2xl font-extrabold mb-2">Tigom: Budget Planner</h3>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                A web application designed to help users manage their expenses. I designed the UI in Figma and developed the frontend using Vue.js, with a robust NodeJS and PostgreSQL backend.
+            </p>
+            <a href="tigom.html" class="text-sky-400 font-bold text-sm hover:underline">View Implementation Details →</a>
+        </div>
+
+        <div class="glass rounded-3xl p-8 group">
+            <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 mb-6 flex items-center justify-center">
+                <span class="text-4xl font-black text-slate-700 tracking-widest uppercase">ERP.Web</span>
+            </div>
+            <div class="flex gap-2 mb-4">
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">VueJS</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">ExpressJS</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase">PostgreSQL</span>
+            </div>
+            <h3 class="text-2xl font-extrabold mb-2">Enterprise Resource Planning</h3>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                An in-house project developed to manage company employees. Built with VueJS for the frontend and ExpressJS for the backend, successfully deployed on Hostinger.
+            </p>
+            <a href="#" class="text-sky-400 font-bold text-sm hover:underline">View Implementation Details →</a>
+        </div>
+
+        <div class="glass rounded-3xl p-8 group">
+            <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 mb-6 flex items-center justify-center">
+                <span class="text-4xl font-black text-slate-700 tracking-widest uppercase">Mobile.IMS</span>
+            </div>
+            <div class="flex gap-2 mb-4">
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase" style="color:#a855f7; border-color:rgba(168,85,247,0.2); background:rgba(168,85,247,0.1)">Flutter</span>
+                <span class="tag px-3 py-1 rounded-full text-[10px] font-black uppercase" style="color:#a855f7; border-color:rgba(168,85,247,0.2); background:rgba(168,85,247,0.1)">Figma</span>
+            </div>
+            <h3 class="text-2xl font-extrabold mb-2">IMS Mobile Application</h3>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                A cross-platform mobile app developed using Flutter to help clients manage business operations. Tested extensively on simulators and physical devices for backend readiness.
+            </p>
+            <a href="#" class="text-sky-400 font-bold text-sm hover:underline">View Implementation Details →</a>
+        </div>
+
+    </main>
+
+    <section class="max-w-7xl mx-auto px-8 pb-32 text-center relative z-10">
+        <div class="glass p-12 rounded-[3rem] border-sky-500/20">
+            <h3 class="text-3xl font-extrabold mb-4">Ready to start something new?</h3>
+            <p class="text-slate-400 mb-8 max-w-md mx-auto">I'm a BS Information Technology graduate specialized in full-stack solutions.</p>
+            <button class="bg-sky-500 text-white px-10 py-4 rounded-2xl font-bold hover:bg-sky-400 transition shadow-xl shadow-sky-500/20">
+                Contact Me
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>
