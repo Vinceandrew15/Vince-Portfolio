@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation Details | Mobile.IMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, #1e293b 0%, #020617 70%);
+            z-index: -1;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-tag {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="bg-glow"></div>
+
+    <nav class="max-w-7xl mx-auto px-8 py-10 flex justify-between items-center relative z-20">
+        <a href="index.html" class="text-2xl font-bold tracking-tighter">VINCE ANDREW GICA<span class="text-sky-400">.</span></a>
+        <div class="flex space-x-10 text-[11px] font-bold tracking-[0.2em] text-slate-400">
+            <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+            <a href="projects.html" class="hover:text-white transition-colors">PROJECTS</a>
+            <a href="contact.html" class="hover:text-white transition-colors">CONTACT</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-8 pb-32">
+        <header class="pt-20 pb-20 max-w-4xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="tech-tag">FLUTTER</span>
+                <span class="tech-tag">CROSS-PLATFORM</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-gradient">
+                Mobile.IMS Implementation.
+            </h1>
+            <p class="text-slate-400 text-xl font-medium max-w-2xl leading-relaxed">
+                Detailed technical breakdown of the Inventory Management System designed to streamline business operations through high-performance mobile architecture.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <div class="lg:col-span-8 space-y-8">
+                <section class="glass-card p-10">
+                    <h3 class="text-2xl font-bold mb-6">System Architecture</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        The <strong>Mobile.IMS</strong> application was engineered as a cross-platform solution to help clients manage business operations with real-time efficiency. The architecture focuses on state management and seamless data synchronization across devices.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <h4 class="text-white font-bold mb-2">Frontend Framework</h4>
+                            <p class="text-slate-500 text-sm">Developed with Flutter for consistent performance on both iOS and Android platforms.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <h4 class="text-white font-bold mb-2">Core Logic</h4>
+                            <p class="text-slate-500 text-sm">Implemented robust inventory tracking modules and automated reporting systems.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card p-10">
+                    <h3 class="text-2xl font-bold mb-8">Key Capabilities</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="w-6 h-6 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-sky-500"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Real-time Inventory Sync</h4>
+                                <p class="text-slate-500 text-sm">Ensures inventory levels are updated instantly across all client interfaces.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Operational Efficiency</h4>
+                                <p class="text-slate-500 text-sm">Automated workflows reduce manual entry errors and improve business turnaround time.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="lg:col-span-4 space-y-8">
+                <div class="glass-card p-8">
+                    <h3 class="text-xs font-black uppercase tracking-[0.3em] text-slate-500 mb-8">Project Details</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[10px] font-black text-sky-400 uppercase tracking-widest mb-1">Developer</p>
+                            <h4 class="text-white font-bold">Vince Andrew M. Gica</h4>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-1">Role</p>
+                            <h4 class="text-white font-bold">Full-Stack Mobile Developer</h4>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black text-purple-400 uppercase tracking-widest mb-1">Status</p>
+                            <h4 class="text-white font-bold">Implementation Phase</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 border-sky-500/20">
+                    <h3 class="text-sm font-bold text-white mb-4">Project Impact</h3>
+                    <p class="text-slate-500 text-sm italic">
+                        "Designed to assist clients in managing business operations more effectively through innovative mobile technology."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-20 py-16 text-center">
+            <a href="projects.html" class="inline-flex items-center text-slate-400 hover:text-white transition-colors font-bold text-sm">
+                <svg class="mr-2 w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                BACK TO PROJECTS
+            </a>
+        </footer>
+    </main>
+</body>
+</html>
